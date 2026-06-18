@@ -1,0 +1,44 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+# Local source/material folders kept outside the published game
+NowaGra/
+OLSZTYN strona v1 + Materiały*/
+video/
+extract.js
+extract_map.js
+przystanki.json
+przystanki_clean.js
+Purda3.html
+1.webp
+leszy.webp
+poludnica.webp
+rozdroze.webp
+strzyga.webp
+szare_bagna.webp
+topielica.png
+utopiec.webp
+wilkoak.webp
+zapomniany_szlak.webp
+zarosly_trakt.webp

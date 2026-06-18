@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glosariusz Olsztyna - mapa gry</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <!-- INTRO SECTION -->
+    <section id="intro-section" class="active">
+      <video id="intro-video" playsinline></video>
+      <canvas id="intro-canvas"></canvas>
+      <div id="intro-overlay">
+        <h1 id="intro-title" class="hidden">Glosariusz Olsztyna</h1>
+        <p id="intro-subtitle" class="hidden">Odkryj historię i dawne ścieżki...</p>
+        <button id="start-intro" class="glass-button">Rozpocznij Podróż</button>
+        <button id="skip-intro" class="glass-button hidden">Pomiń Intro</button>
+      </div>
+    </section>
+
+    <!-- GAME SECTION -->
+    <section id="game-section" class="hidden">
+      <!-- MAP/EXPLORATION AREA -->
+      <div class="map-container">
+        <div class="map-zoom">
+          <!-- We use an abstract gradient background representing the dark woods -->
+          <div class="map-bg"></div>
+          <div id="nodes-container">
+            <!-- JS will populate nodes here -->
+          </div>
+        </div>
+      </div>
+      
+      <!-- HUD -->
+      <div class="hud">
+        <div class="hud-brand"><span>Glosariusz</span> Olsztyna</div>
+        <div class="hud-stats">Wiedza: <span id="hud-xp">0</span> XP</div>
+      </div>
+
+      <!-- MODAL/CHARACTER CARD -->
+      <div id="card-modal" class="hidden">
+        <div class="card-backdrop"></div>
+        <div class="card-content glass-panel">
+          <button id="close-card" class="close-btn">&times;</button>
+          
+          <div class="card-media">
+            <video id="card-video" autoplay loop muted playsinline class="hidden"></video>
+            <img id="card-image" src="" alt="Monster" class="hidden" />
+            <div class="card-media-overlay"></div>
+            <div id="card-credit" class="card-credit hidden"></div>
+          </div>
+          
+          <div class="card-info">
+            <h2 id="card-title">Nazwa</h2>
+            <div class="card-type" id="card-type">Miejscowość</div>
+            
+            <div id="card-content-area">
+                <p id="card-desc" class="card-desc-text">Ciekawostka...</p>
+                <div id="card-see-also" class="card-see-also hidden"></div>
+                
+                <div class="quiz-section" id="quiz-section">
+                    <h3 id="quiz-question" class="quiz-question">Pytanie?</h3>
+                    <div id="quiz-options" class="quiz-options">
+                        <!-- Buttons injected here by JS -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card-actions">
+              <div id="action-result" class="hidden"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
