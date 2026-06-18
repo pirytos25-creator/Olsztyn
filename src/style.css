@@ -238,6 +238,8 @@ h1, h2, h3, h4 {
   position: relative;
   width: min(calc(100vh - 92px), calc(100vw - 24px), 1180px);
   min-width: min(calc(100vw - 24px), 620px);
+  aspect-ratio: 1500 / 1917;
+  height: auto;
   isolation: isolate;
   border: 1px solid rgba(246, 223, 176, 0.28);
   background: #211a12;
